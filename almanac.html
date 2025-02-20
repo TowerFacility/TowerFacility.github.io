@@ -7,6 +7,7 @@
         <button class="almanacTabButton" onclick="ShowTab('Towers')">Towers</button>
         <button class="almanacTabButton" onclick="ShowTab('Ammos')">Ammos</button>
         <button class="almanacTabButton" onclick="ShowTab('Other')">Other</button>
+        <button class="almanacTabButton" onclick="ShowTab('Buildings')">Buildings</button>
         
         <div class="almanacTab">
             
@@ -28,6 +29,10 @@
             <a href="https://towerfacility.github.io/almanac/other/tin"><img src="assets/almanac/other/Tin.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
             <img src="assets/almanac/other/" width="250px" height="85%" style="margin-Top: 15px;">
         </div>
+        <div hidden class="almanacTab" id="Buildings">
+            <a href="https://towerfacility.github.io/almanac/buildings/alloy-constructor"><img src="assets/almanac/buildings/Alloy-Constructor.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
+            <img src="assets/almanac/buildings/" width="250px" height="85%" style="margin-Top: 15px;">
+        </div>
         <script>
             function ShowTab(tab) {
                 var tabtoshow = document.getElementById(tab)
@@ -42,7 +47,7 @@
         <style>
             .almanacTabButton {
                 background-color: D0D0D0;
-                width: 24.72%;
+                width: 25%;
                 height: 50px;
                 border: none;
                 transition-duration: 0.15s;
