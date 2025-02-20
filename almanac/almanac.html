@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Tower Facility Almanac</title>
+    </head>
+    <body>
+        <button class="almanacTabButton" onclick="ShowTab('Alloys')">Alloys</button>
+        <button class="almanacTabButton" onclick="ShowTab('Towers')">Towers</button>
+        <button class="almanacTabButton" onclick="ShowTab('Ammos')">Ammos</button>
+        <button class="almanacTabButton" onclick="ShowTab('Other')">Other</button>
+        
+        <div class="almanacTab">
+            
+        </div>
+        <div hidden class="almanacTab" id="Alloys">
+            <a href="https://towerfacility.github.io/almanac/alloys/bronze"><img src="assets/alloys/Bronze.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
+            <img src="assets/alloys/" width="250px" height="85%" style="margin-Top: 15px;">
+        </div>
+        <div hidden class="almanacTab" id="Towers">
+            <a href="https://towerfacility.github.io/almanac/towers/basic-archer"><img src="assets/towers/Basic-Archer.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
+            <img src="assets/towers/" width="250px" height="85%" style="margin-Top: 15px;">
+        </div>
+        <div hidden class="almanacTab" id="Ammos">
+            <a href="https://towerfacility.github.io/almanac/ammos/basic-arrow"><img src="assets/ammos/Basic-Arrow.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
+            <img src="assets/ammos/" width="250px" height="85%" style="margin-Top: 15px;">
+        </div>
+        <div hidden class="almanacTab" id="Other">
+            <a href="https://towerfacility.github.io/almanac/other/copper"><img src="assets/other/Copper.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
+            <a href="https://towerfacility.github.io/almanac/other/tin"><img src="assets/other/Tin.png" width="250px" height="85%" style="margin-Top: 15px;"></a>
+            <img src="assets/other/" width="250px" height="85%" style="margin-Top: 15px;">
+        </div>
+        <script>
+            function ShowTab(tab) {
+                var tabtoshow = document.getElementById(tab)
+                var alltabs = document.querySelectorAll('.almanacTab')
+                
+                for (let i = 0; i < alltabs.length; i++) {
+                    alltabs[i].hidden = true
+                }
+                tabtoshow.hidden = false
+            }
+        </script>
+        <style>
+            .almanacTabButton {
+                background-color: D0D0D0;
+                width: 24.72%;
+                height: 50px;
+                border: none;
+                transition-duration: 0.15s;
+            }
+            .almanacTabButton:hover {
+                background-color: grey;
+                transition-duration: 0.4s;
+            }
+            .almanacTab {
+                width: 100%;
+                height: calc(100% - 50px);
+                background-color: D0D0D0;
+                overflow: auto;
+            }
+        </style>
+    </body>
+</html>
